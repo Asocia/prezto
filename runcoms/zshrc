@@ -100,3 +100,7 @@ function zvm_after_init() {
     bindkey "\e[1;3B" dirhistory_zle_dirhistory_down
 }
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
