@@ -91,6 +91,8 @@ function zvm_after_init() {
     bindkey '^h' backward-kill-word
     bindkey '^w' backward-kill-word
 
+    bindkey -s '^Z' "fg\n"
+
 
     bindkey '^x' fzf-cd-widget
     bindkey "\e\e" fuck-command-line
