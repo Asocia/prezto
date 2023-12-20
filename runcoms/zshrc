@@ -28,9 +28,12 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=true
 
 unsetopt CORRECT
 
-
-export PATH="/Users/sahin/Library/Python/3.9/bin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+source "$HOME/scripts/common-vars.sh"
+if [ "$os_name" = "Darwin" ]; then
+echo "$os_name"
+  export PATH="/Users/sahin/Library/Python/3.9/bin:$PATH"
+  export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
@@ -100,7 +103,7 @@ function zvm_after_init() {
 
 
     bindkey '^x' fzf-cd-widget
-    bindkey "\e\e" fuck-command-line
+    # bindkey "\e\e" fuck-command-line
     bindkey "\e[1;3D" dirhistory_zle_dirhistory_back
     bindkey "\e[1;3C" dirhistory_zle_dirhistory_future
     bindkey "\e[1;3A" dirhistory_zle_dirhistory_up
@@ -109,5 +112,6 @@ function zvm_after_init() {
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
