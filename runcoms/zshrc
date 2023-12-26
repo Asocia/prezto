@@ -20,7 +20,7 @@ fi
 
 
 # Customize to your needs...
-source "${ZDOTDIR:-$HOME}/.aliases"
+source "${ZDOTDIR:-$HOME}/aliases"
 fpath=(~/.config/zsh/completions $fpath)
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
