@@ -14,8 +14,8 @@ fi
 
 
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+if [[ -s "${ZDOTDIR:-$HOME}/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/init.zsh"
 fi
 
 
