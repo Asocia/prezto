@@ -11,20 +11,19 @@ same place.
 
 
 ## Installation
-Installation differs a little from original prezto instructions. You need to clone the repository into your `$ZDOTDIR/zsh` directly
-instead of `$ZDOTDIR/zsh/.zprezto`. You can optionally checkout one of `linux` or `macos` branches. You don't need to create links
-because they will come with the repo itself.
+Installation differs a little from original prezto instructions. You need to clone the repository into your `$ZDOTDIR/zsh` directly instead of `$ZDOTDIR/zsh/.zprezto`. You can optionally checkout one of `linux` or `macos` branches. You don't need to create symlinks because they will come with the repo itself.
 
 Make sure `$ZDOTDIR` is set in your environment. Add the following lines to `$HOME/.zshenv` if they don't already exists.
 ```
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
 export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
 ```
+You might also need to login again or restart your computer for the changes to take the effect. Restart it to make sure :D
 
-Then open a new sheel and clone the repo:
+Clone the repo:
 
 ```bash
-git clone --recursive https://github.com/sahinakkaya/prezto.git "$ZDOTDIR/zsh"
-exec zsh
-# enjoy!
+git clone --recursive https://github.com/sahinakkaya/zsh-config.git "$ZDOTDIR/zsh"
 ```
+
+Open a new terminal. It should start installing required plugins with `zinit`.
