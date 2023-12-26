@@ -35,7 +35,7 @@
     background_jobs         # presence of background jobs
     context                 # user@hostname
     os_icon                 # os identifier
-    battery               # internal battery
+    # battery               # internal battery
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
