@@ -20,7 +20,7 @@ alias sf="shrfile"
 alias co="cpyout"
 alias cf="cpyfile"
 alias emacs="emacsclient -c -a emacs"
-alias ls=lsd
+alias ls="lsd --hyperlink=auto"
 alias ltr="ls -ltr"
 alias lsl="clear; ls"
 alias lll="clear; ll"
