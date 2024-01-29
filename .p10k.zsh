@@ -346,6 +346,7 @@
 
   # Custom prefix.
   # typeset -g POWERLEVEL9K_DIR_PREFIX='%fin '
+  typeset -g POWERLEVEL9K_DIR_PREFIX=' '
 
   #####################################[ vcs: git status ]######################################
   # Branch icon. Set this parameter to '\UE0A0 ' for the popular Powerline branch icon.
